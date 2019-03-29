@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# A - Two Rectangles
+# https://atcoder.jp/contests/abc052/tasks/abc052_a
 
 a, b, c, d = map(int, input().split())
 square1 = a * b
