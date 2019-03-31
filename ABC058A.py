@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-# A - Remaining Time
-# https://atcoder.jp/contests/abc057/tasks/abc057_a
+# A - ι⊥l
+# https://atcoder.jp/contests/abc058/tasks/abc058_a
 
-a, b = map(int, input().split())
-t = a + b
-if t >= 24:
-    t -= 24
-print(t)
+a, b, c = map(int, input().split())
+
+if b - a == c - b:
+    print('YES')
+else:
+    print('NO')
