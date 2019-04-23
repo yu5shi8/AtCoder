@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # B - Palindromic Numbers
 # https://atcoder.jp/contests/abc090/tasks/abc090_b
 
