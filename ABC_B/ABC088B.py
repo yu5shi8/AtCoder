@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
-# ABC088B - Card Game for Two
-# https://atcoder.jp/contests/abs/tasks/abc088_b
+# B - Card Game for Two
+# https://atcoder.jp/contests/abc088/tasks/abc088_b
 
 n = int(input())
-a = sorted(list(map(int, input().split())), reverse=True)
+a = sorted(map(int, input().split()), reverse=True)
 alice = 0
 bob = 0
 
 for i in range(n):
     if i % 2 == 0:
-        alice += a[i]
+        alice += int(a[i])
     else:
-        bob += a[i]
+        bob += int(a[i])
 
-ans = alice - bob
-print(ans)
+print(alice - bob)
+
+# 17:40 - 18:01
+
