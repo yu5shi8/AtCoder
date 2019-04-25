@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# ABC087B - Coins
-# https://atcoder.jp/contests/abs/tasks/abc087_b
+# B - Coins
+# https://atcoder.jp/contests/abc087/tasks/abc087_b
 
 a = int(input()) + 1
 b = int(input()) + 1
@@ -11,8 +11,9 @@ ans = 0
 for i in range(a):
     for j in range(b):
         for k in range(c):
-            if 500*i + 100*j + 50*k == x:
+            if i*500 + j*100 + k*50 == x:
                 ans += 1
+
 print(ans)
 
-# わからなかったので他の人の解答を見ました
+# 9:23 - 9:52
