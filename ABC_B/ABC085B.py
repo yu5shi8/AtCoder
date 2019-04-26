@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
-# ABC085B - Kagami Mochi
-# https://atcoder.jp/contests/abs/tasks/abc085_b
+# B - Kagami Mochi
+# https://atcoder.jp/contests/abc085/tasks/abc085_b
 
 n = int(input())
-l = []
+l = [int(input()) for i in range(n)]
+print(len(set(l)))
 
-for i in range(n):
-    d = int(input())
-    l.append(d)
+# 17:57 - 18:03
 
-ans = len(list(set(l)))
-print(ans)
