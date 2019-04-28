@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
-# ABC083B - Some Sums
-# https://atcoder.jp/contests/abs/tasks/abc083_b
+# B - Some Sums
+# https://atcoder.jp/contests/abc083/tasks/abc083_b
 
 n, a, b = map(int, input().split())
-ans = []
+l = []
 
 for i in range(1, n+1):
-    num = sum(list(map(int, str(i))))
-    if num >= a and num <= b:
-        ans.append(i)
-print(sum(ans))
+    num = 0
+    for j in str(i):
+        num += int(j)
+    if a <= num <= b:
+        l.append(i)
+
+print(sum(l))
+
+# 18:23 - 18:49
