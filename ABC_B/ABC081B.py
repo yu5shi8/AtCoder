@@ -1,16 +1,18 @@
 # -*- coding: utf-8 -*-
-# ABC081B - Shift only
-# https://atcoder.jp/contests/abs/tasks/abc081_b
+# B - Shift only
+# https://atcoder.jp/contests/abc081/tasks/abc081_b
 
 n = int(input())
-l = list(map(int, input().split()))
-ans = 10000000000
+a = list(map(int, input().split()))
+ans = 1000000000
 
 for i in range(n):
     count = 0
-    while l[i] % 2 == 0:
-        l[i] = int(l[i] / 2)
+    while a[i] % 2 == 0:
+        a[i] = a[i]//2
         count += 1
     if ans >= count:
         ans = count
 print(ans)
+
+# 17:37 - 17:45
