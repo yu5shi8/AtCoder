@@ -2,18 +2,12 @@
 # B - ss
 # https://atcoder.jp/contests/abc066/tasks/abc066_b
 
-s = list(input())
+s = input()
 
-for i in range(1,len(s)):
-    len_s = len(s) - 2 * i
-    for j in range(1,len(s)):
-        left = s[0:j]
-        right = s[j:len_s]
-        if left == right:
-            ans = len(left + right)
-            print(ans)
-            exit()
-        elif len(left) > len(right):
-            break
+for i in range(len(s)//2):
+    s = s[:len(s)-2]
+    if s[:len(s)//2] == s[len(s)//2:]:
+        print(len(s))
+        exit()
 
-# 22:24 - 24:13
+# 0:25 - 0:33
