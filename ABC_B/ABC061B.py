@@ -10,7 +10,10 @@ for i in range(m):
     ans[a-1] += 1
     ans[b-1] += 1
 
-for i in ans:
-    print(i)
+print(*ans, sep='\n')
+
+# for i in ans:
+#     print(i)
 
 # 14:30 - 14:52
+# 14:56（内包表記修正）
