@@ -2,14 +2,15 @@
 # B - Training Camp
 # https://atcoder.jp/contests/abc055/tasks/abc055_b
 
-n = int(input())+1
-num = 10**9+7
+n = int(input()) + 1
+mod = 10**9 + 7
 power = 1
 
 for i in range(1, n):
-    power = power * i
+    power *= i
+    power %= mod
 
-ans = power % num
-print(ans)
+print(power)
 
-# 16:53 - 17:24（TLE）
+# 解説・解答を参照
+# 17:26 - 18:12
