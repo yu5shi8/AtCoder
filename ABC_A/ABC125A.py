@@ -3,7 +3,7 @@
 # https://atcoder.jp/contests/abc125/tasks/abc125_a
 
 a, b, t = map(int, input().split())
-num = t // a
-print(b * num)
+ans = (t // a) * b
+print(ans)
 
-# 21:00 - 21:09
+# 18:19 - 18:25
