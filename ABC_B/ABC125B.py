@@ -5,13 +5,12 @@
 n = int(input())
 v = list(map(int, input().split()))
 c = list(map(int, input().split()))
-ans = 0
+ans = []
 
 for i in range(n):
     if v[i] > c[i]:
-        calc = v[i] - c[i]
-        ans += calc
+        ans.append(v[i] - c[i])
 
-print(ans)
+print(sum(ans))
 
-# 21:09 - 24
+# 18:26 - 18:35
