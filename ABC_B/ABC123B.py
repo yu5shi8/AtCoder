@@ -2,45 +2,21 @@
 # B - Five Dishes
 # https://atcoder.jp/contests/abc123/tasks/abc123_b
 
-'''
-【解法わからず時間切れ】
 a = int(input())
 b = int(input())
 c = int(input())
 d = int(input())
 e = int(input())
-
 l = [a, b, c, d, e]
-order_l = []
+sur = [0] * 5
 
-for i in l:
-  j = abs(123 - i)
-  print(j)
-  order_l.append(j)
+for i in range(len(l)):
+    if l[i] % 10 != 0:
+        sur[i] = 10 - (l[i]%10)
 
-ans = sum(l)
+ans = sum(l) + sum(sur) - max(sur)
 print(ans)
-'''
 
-# 解説を見て再回答
-a = int(input())
-b = int(input())
-c = int(input())
-d = int(input())
-e = int(input())
-
-now_time = [a, b, c, d, e]
-next_time = []
-
-for i in now_time:
-    if i % 10 == 0:
-        next_time.append(i)
-    else:
-        while i % 10 != 0:
-            i += 1
-        next_time.append(i)
-
-combined = sorted([x - y for (x, y) in zip(next_time, now_time)])
-
-best_time = sum(next_time) - max(combined)
-print(best_time)
+# 18:19 - 19:00（RE / WA）
+# - 19:08（WA）
+# （解答を閲覧）- 19:20
