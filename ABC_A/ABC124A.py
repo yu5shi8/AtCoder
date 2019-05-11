@@ -4,8 +4,8 @@
 
 a, b = map(int, input().split())
 ans = 0
-
 ans += max(a, b)
+
 if a >= b:
     a -= 1
 else:
@@ -13,3 +13,5 @@ else:
 
 ans += max(a, b)
 print(ans)
+
+# 13:46 - 13:50
