@@ -25,28 +25,4 @@ for i in range(n):
 
 print(max(ans))
 
-
-
-'''
-n = int(input())
-a = list(map(int, input().split()))
-calc = []
-ans = 0
-
-for j in range(n):
-    for i in range(1, max(a)):
-        if a[j] % i == 0:
-            calc.append(i)
-
-calc = sorted(calc)
-
-for i in range(len(calc)):
-    if calc.count(calc[i]) == n-1 and ans < calc[i]:
-        ans = calc[i]
-
-print(ans)
-'''
-
-# 18:36 - 19:36（TLE）
-# （解答を閲覧）- 19:45
-# 21:21 - 21:40
+# 13:40 - 13:44
