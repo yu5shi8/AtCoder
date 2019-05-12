@@ -8,19 +8,18 @@ b = int(input())
 c = int(input())
 d = int(input())
 e = int(input())
-l = [a, b, c, d, e]
+trafic = [a, b, c, d, e]
 ans = 5
-min_take = min(l)
 
-if min(l) >= n:
-    ans = 5
+if min(trafic) >= n:
+    print(ans)
+    exit()
 else:
-    if n % min_take != 0:
-        group = n // min_take
+    if n % min(trafic) == 0:
+        group = n//min(trafic) - 1
     else:
-        group = n // min_take - 1
-    ans += group
+        group = n//min(trafic)
 
-print(ans)
+print(ans+group)
 
-# 19:26 - 20:17
+# 10:38 - 10:52
