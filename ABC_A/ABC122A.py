@@ -2,17 +2,21 @@
 # A - Double Helix
 # https://atcoder.jp/contests/abc122/tasks/abc122_a
 
+l = str.maketrans('AGCT', 'TCGA')
+print(input().translate(l))
+
+'''
 b = input()
 
 if b == 'A':
     print('T')
 elif b == 'T':
     print('A')
-elif b =='C':
-    print('G')
-else:
+elif b == 'G':
     print('C')
+else:
+    print('G')
+'''
 
-# 対応表を辞書で作ればスマート
-# l = {'A':'T', 'T':'A', 'C':'G', 'G':'C'}
-# print(l[b])
+# 11:46 - 11:49
+# （解答を閲覧）- 11:54
