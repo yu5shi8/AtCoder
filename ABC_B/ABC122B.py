@@ -3,17 +3,19 @@
 # https://atcoder.jp/contests/abc122/tasks/abc122_b
 
 s = input()
-k = ['A', 'G', 'C', 'T']
-i = 0
+s_0 = s[:]
+s_0 = s_0.replace('A', '.').replace('G', '.').replace('C', '.').replace('T', '.')
+count = 0
+ans = 0
 
-while i < len(s):
-    if s[i] in k:
-        s = s
+for i in range(len(s_0)):
+    if s_0[i] == '.':
+        count += 1
+        if ans < count:
+            ans = count
     else:
-        s_changed = s[:i] + 'z' + s[i + 1:]
-        s = s_changed
-    i += 1
+        count = 0
 
-s_split = s.split('z')
-ans = len(max(s_split, key=len))
 print(ans)
+
+# 11:56 - 12:29
