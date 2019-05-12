@@ -7,11 +7,9 @@ h = list(map(int, input().split()))
 ans = 1
 
 for i in range(1, n):
-    if max(h[:i]) <= h[i]:
+    if h[0] <= h[i] and max(h[:i]) <= h[i]:
         ans += 1
 
 print(ans)
 
-# 13:51 - 14:00（WA）
-# - 14:27（WA）
-# - 14:32（解答を見た）
+# 10:13 - 10:36
