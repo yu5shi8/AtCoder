@@ -4,30 +4,17 @@
 
 n, m, c = map(int, input().split())
 b = list(map(int, input().split()))
-a = list()
+a = [list(map(int, input().split())) for _ in range (n)]
+ans = 0
 
-for a_list in range(0, n):
-    a_list = list(map(int, input().split())) 
-    a.append(a_list)
+for i in range(n):
+    calc = 0
+    for j in range(m):
+        calc += a[i][j]*b[j]
+    if calc + c > 0:
+        ans += 1
 
-count = 0
-calc_n = 0
-while calc_n < n:
-    ab = 0
-    calc_m = 0
-    while calc_m < m:
-        ab += a[calc_n][calc_m] * b[calc_m]
-        calc_m += 1
-    check = ab + c
-    if check > 0:
-        count += 1
-    calc_n += 1
-print(count)
+print(ans)
 
-# enumerate を選択肢に入れてみよう
-# for i in range(n):
-#     q = [a[i][j] * x for j, x in enumerate(b)]
-#     if sum(q) + c > 0:
-#         count += 1
-# print(count)
-
+# 20:29 - 20:45
+# 21:05 - 21:12
