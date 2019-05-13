@@ -2,7 +2,10 @@
 # A - White Cells
 # https://atcoder.jp/contests/abc121/tasks/abc121_a
 
-H, W = map(int, input().split())
-h, w = map(int, input().split())
+h, w = map(int,input().split())
+a, b = map(int, input().split())
 
-print((H-h) * (W-w))
+ans = (h-a) * (w-b)
+print(ans)
+
+# 20:23 - 20:28
