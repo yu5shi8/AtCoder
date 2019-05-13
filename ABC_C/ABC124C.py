@@ -3,12 +3,12 @@
 # https://atcoder.jp/contests/abc124/tasks/abc124_c
 
 s = input()
-ans = 0
+to_0 = 0
 
 for i in range(len(s)):
-    if i % 2 == int(s[i]):
-        ans += 1
+    if i % 2 != int(s[i]):
+        to_0 += 1
 
-print(min(ans, len(s)-ans))
+print(min(to_0, len(s)-to_0))
 
-# 10:54 - 11:42
+# 20:13 - 20:22
