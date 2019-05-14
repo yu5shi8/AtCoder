@@ -4,26 +4,22 @@
 
 n, m = map(int, input().split())
 ab = [list(map(int, input().split())) for _ in range(n)]
-ab_l = sorted(ab)
-ans = 0
+sorted_ab = sorted(ab)
 
-count = [0]*(n+1)
+ab_price = [0] * n
+num = [0] * (n+1)
+
 for i in range(n):
-    count[i+1] = count[i] + ab_l[i][1]
-
-for i in range(n+1):
-    if count[i] >= m:
-        to_here = i
-        minus_count = count[to_here] - m
+    num[i+1] = num[i] + sorted_ab[i][1]
+    ab_price[i] = sorted_ab[i][0] * sorted_ab[i][1]
+    if num[i+1] >= m:
+        to_here = i + 1
         break
 
-all_money = [0]*n
-for i in range(to_here):
-    all_money[i] = ab_l[i][0] * ab_l[i][1]
-
-ans = sum(all_money) - ab_l[to_here-1][0] * minus_count
+max_price = sorted_ab[to_here-1][0]
+minus_num = num[to_here] - m
+ans = sum(ab_price[:to_here]) - max_price * minus_num
 
 print(ans)
 
-# 21:14 - 22:41
-# 23:20 - 23:56
+# 20:47 - 21:35
