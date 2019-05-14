@@ -3,12 +3,11 @@
 # https://atcoder.jp/contests/abc120/tasks/abc120_a
 
 a, b, c = map(int, input().split())
+ans = b // a
 
-if b // a >= c:
+if ans >= c:
     print(c)
 else:
-    print(b // a)
+    print(ans)
 
-# b // a もしくは c のうち、どちらか小さい方を答えるので
-# min() を使うのがよりスマート
-# print(min((b // a), c))
+# 21:38 - 21:43
