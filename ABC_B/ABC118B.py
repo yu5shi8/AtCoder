@@ -3,8 +3,8 @@
 # https://atcoder.jp/contests/abc118/tasks/abc118_b
 
 n, m = map(int, input().split())
-ka = [list(map(int, input().split())) for i in range(n)]
-ans = [0] * m
+ka = [list(map(int, input().split())) for _ in range(n)]
+ans = [0]*m
 
 for i in range(n):
     for j in ka[i][1:]:
@@ -12,5 +12,4 @@ for i in range(n):
 
 print(ans.count(n))
 
-# 0:54 - 1:21
-#（回答の調整）- 1:26
+# 10:58 - 11:05
