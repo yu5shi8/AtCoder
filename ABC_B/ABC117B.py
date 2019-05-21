@@ -4,8 +4,13 @@
 
 n = int(input())
 l = list(map(int, input().split()))
-long = max(l)
-if sum(l) - long > long:
+
+longest = max(l)
+calc = sum(l) - longest
+
+if calc > longest:
     print('Yes')
 else:
     print('No')
+
+# 15:36 - 15:41
