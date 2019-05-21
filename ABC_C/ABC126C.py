@@ -6,17 +6,14 @@ n, k = map(int, input().split())
 ans = 0
 
 for i in range(1, n+1):
-    count = 0
     if i >= k:
-        ans += 1 / n
+        ans += 1/n
     else:
         count = 1
-        while i * 2**count < k:
+        while i * 2 ** count < k:
             count += 1
-        num = (1/n) * (0.5**count)
-        ans += num
+        ans += (1/n) * (0.5**count)
 
-print('{:.12f}'.format(ans))
+print(ans)
 
-# 20:32 - 20:48（WA）
-# （解答を閲覧）- 21:06
+# 16:44 - 16:48
