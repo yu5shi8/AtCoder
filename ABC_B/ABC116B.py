@@ -2,21 +2,18 @@
 # B - Collatz Problem
 # https://atcoder.jp/contests/abc116/tasks/abc116_b
 
-def calc(n):
-    if n % 2 == 0:
-        return int(n / 2)
-    else:
-        return int((n*3) + 1)
-
 s = int(input())
 a = [s]
-m = 1
+i = 0
 
-while True:
-    num = calc(a[m-1])
-    if num not in a:
-        a.append(num)
-        m += 1
+while a.count(a[i]) != 2:
+    if a[i] % 2 == 0:
+        a.append(a[i]//2)
     else:
-        print(len(a) + 1)
-        break
+        a.append(3*a[i] + 1)
+    i += 1
+
+ans = len(a)
+print(ans)
+
+# 8:37 - 9:04
