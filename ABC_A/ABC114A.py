@@ -3,10 +3,13 @@
 # https://atcoder.jp/contests/abc114/tasks/abc114_a
 
 x = int(input())
-if x == 7 or x == 5 or x == 3:
-    print('YES')
-else:
-    print('NO')
+print('YES' if x in [7, 5, 3] else 'NO')
 
-# スマートに書く方法がある
-# if x in [7, 5, 3]:
+# x = int(input())
+# if x == 3 or x == 5 or x == 7:
+#     print('YES')
+# else:
+#     print('NO')
+
+# 16:02 - 16:04
+#（別解を参照）- 16:06
