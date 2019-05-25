@@ -7,13 +7,13 @@ n = int(input())
 def dfs(s):
     if int(s) > n:
         return 0
-    ret = 1 if all(s.count(c)>0 for c in '753') else 0
+    ret = 1 if all(s.count(c) > 0 for c in '753') else 0
     for c in '753':
         ret += dfs(s + c)
     return ret
 
 print(dfs('0'))
 
-# 16:25 - 17:57
-#（解説を閲覧）- 18:47
-#（再挑戦）18:47 - 18:55
+# 16:50 - 16:56
+#（再挑戦）17:12 - 17:27
+
