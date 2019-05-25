@@ -5,16 +5,13 @@
 n = int(input())
 t, a = map(int, input().split())
 h = list(map(int, input().split()))
-ans_l = []
-
-def elev(t, n):
-    high = t - n * 0.006
-    return abs(a - high)
+temp = [0]*n
+ans = [0]*n
 
 for i in range(n):
-    ans = elev(t, h[i])
-    ans_l.append(ans)
+    temp[i] = t - h[i] * 0.006
+    ans[i] = abs(temp[i] - a)
 
-num = min(ans_l)
-print(ans_l.index(num) + 1)
+print(ans.index(min(ans))+1)
 
+# 17:02 - 17:10
