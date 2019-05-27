@@ -2,15 +2,18 @@
 # B - Time Limit Exceeded
 # https://atcoder.jp/contests/abc112/tasks/abc112_b
 
-N, T = map(int, input().split())
-num = 1001
+n, t = map(int, input().split())
+ct = [list(map(int, input().split())) for _ in range(n)]
+ans = []
 
-for i in range(N):
-    c, t = map(int, input().split())
-    if T >= t and num >= c:
-        num = c
+for i in ct:
+    if i[1] <= t:
+        ans.append(i)
 
-if num != 1001:
-    print(num)
-else:
+if not ans:
     print('TLE')
+else:
+    ans.sort(key=lambda x: x[0])
+    print(ans[0][0])
+
+# 15:59 - 16:09
