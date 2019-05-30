@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
-# ABC085C - Otoshidama
-# https://atcoder.jp/contests/abs/tasks/abc085_c
+# C - Otoshidama
+# https://atcoder.jp/contests/abc085/tasks/abc085_c
 
 n, y = map(int, input().split())
 
-for i in range(n+1):
-    for j in range(n-i+1):
-        if i * 10000 + j * 5000 + (n-i-j)* 1000 == y:
-            print(i, j, n-i-j)
+for a in range(n+1):
+    for b in range(n-a+1):
+        c = n - (a+b)
+        if y == 10000*a + 5000*b + 1000*c and c >= 0:
+            print(a, b, c)
             exit()
 
 print(-1, -1, -1)
 
-# 3つ中、2つが確定すれば残り1つも確定する
+# 18:04 - 18:28
