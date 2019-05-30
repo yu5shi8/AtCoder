@@ -7,7 +7,7 @@ n, y = map(int, input().split())
 for a in range(n+1):
     for b in range(n-a+1):
         c = n - (a+b)
-        if y == 10000*a + 5000*b + 1000*c and c >= 0:
+        if y == 10000*a + 5000*b + 1000*c:
             print(a, b, c)
             exit()
 
