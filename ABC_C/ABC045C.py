@@ -14,9 +14,10 @@ for i in range(2**n):
         if bi[j] == '1':
             num.append('+')
     num.append(s[-1])
-    j_num = ''.join(num)
-    ans += eval(j_num)
+    calc = ''.join(num)
+    ans += eval(calc)
 
 print(ans)
 
 # 18:13 - 21:33
+# 21:40 - 21:45
