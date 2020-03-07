@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# 
-# 
+# A - Station and Bus / 
+# https://atcoder.jp/contests/abc158/tasks/abc158_a
 
 S = input()
 
