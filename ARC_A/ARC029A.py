@@ -4,26 +4,21 @@
 
 N = int(input())
 t = [int(input()) for _ in range(N)]
+
 total = sum(t)
-ans = total
+temp = 500
 
-if N == 1:
-    print(t[0])
-    exit()
-
-for i in range(2**N):
-    bbq = []
+for i in range(1, 2**N):
+    a, b = 0, 0
     for j in range(N):
-        if ((i >> j) & 1):
-            bbq.append(t[j])
-    A = sum(bbq)
-    B = total - A
-    num = abs(A - B)
-    if ans > num:
-        ans = num
-        ans_A = A
-        ans_B = B
+        if (i >> j) & 1:
+            a += t[j]
+            b = total - a
+    check = abs(a - b)
+    if check < temp:
+        temp = check
+        ans = max(a, b)
 
-print(max(ans_A, ans_B))
+print(ans)
 
-# 15:06 - 16:10（AC）
+# 23:07 - 23:19（AC）
