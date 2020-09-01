@@ -3,15 +3,13 @@
 # https://atcoder.jp/contests/abc144/tasks/abc144_b
 
 N = int(input())
-ans = []
 
 for i in range(1, 10):
     for j in range(1, 10):
-        ans.append(i*j)
+        if i * j == N:
+            print('Yes')
+            exit()
 
-if N in ans:
-    print('Yes')
-else:
-    print('No')
+print('No')
 
-# 21:02 - 21:05（AC）
+# 14:09 - 14:12（AC）
